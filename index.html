@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Aleksander Orzech">
+    <meta name="description" content="unikaj pociskow jako impostor z gry Among Us!">
+    <meta name="keywords" content="avoid, bullets, amongus, games, 2024">
+
+    <title>Among the bullets | by Orzech</title>
+
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+
+    <div class="skins-container">
+        <div class="currentTime">
+            <h3 class="time"></h3>
+        </div>
+        <div class="skins-title">
+            <h3 class="title">Skins</h3>
+        </div>
+            <div class="skins">
+                <div class="skin">
+                    <div class="skin-image"><img draggable="false" onclick="impostorSkin()" src="impostor.png" alt="impostor.png"></div>
+                    <div class="name">Impostor</div>
+                </div>
+                <div class="skin">
+                    <div class="skin-image"><img draggable="false" onclick="orangeSkin()" src="orange.png" alt="orange.png"></div>
+                    <div class="name">Orange</div>
+                </div>
+                <div class="skin">
+                    <div class="skin-image"><img draggable="false" onclick="yellowSkin()" src="yellow.png" alt="yellow.png"></div>
+                    <div class="name">Yellow</div>
+                </div>
+                <div class="skin">
+                    <div class="skin-image"><img draggable="false" onclick="whiteSkin()" src="white.png" alt="white.png"></div>
+                    <div class="name">White</div>
+                </div>
+                <div class="skin">
+                    <div class="skin-image"><img draggable="false" onclick="pinkSkin()" src="pink.png" alt="pink.png"></div>
+                    <div class="name">Pink</div>
+                </div>
+                <div class="skin">
+                    <div class="skin-image"><img draggable="false" onclick="greySkin()" src="grey.png" alt="grey.png"></div>
+                    <div class="name">Grey</div>
+                </div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <h3 class="title">Options</h3>
+        <button id="upButton" class="controls-button upBTN" onclick="upBtnClick()">/\</button>
+        <br>
+        <button id="downButton" class="controls-button" onclick="downBtnClick()">\/</button>
+        <br>
+        <button id="leftButton" class="controls-button" onclick="randomBtnClick()">?</button>
+        <br>
+        <button class="controls-button" onclick="window.location.reload()">Refresh</button>
+        <br>
+        <button class="controls-button" onclick="blackColor()" ondblclick="resetBackgroundColor()">FPS+</button>
+    </div>
+
+    <div class="game">
+        <h2 class="score-show">Score: <span class="score"></span></h2>
+        <div id="spaceship" class="spaceship">🟦</div>
+        <div id="obstacle1" class="obstacle obstacle1"></div>
+        <div id="obstacle2" class="obstacle obstacle2"></div>
+        <div id="obstacle3" class="obstacle obstacle3"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

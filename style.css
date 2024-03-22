@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Scada", sans-serif;
+    font-style: normal;
+    background-color: 	#424549;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.currentTime {
+    border: 1px solid #fff;
+    color: #fff;
+    width: 230px;
+    background: url('background.png');
+    margin-bottom: 18px;
+}
+.skins-title h3 {
+    border: 1px solid #fff;
+    width: 230px;
+    background: url('background.png');
+    margin-bottom: 2px;
+}
+.skins {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border: 1px solid #fff;
+    margin-right: 50px;
+    background: url('background.png');
+    color: #fff;
+}
+.skin-image img {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.buttons {
+    width: 150px;
+    height: 465px;
+    margin-right: 50px;
+    padding-top: 30px;
+    border: 1px solid #fff;
+    background-color: #000;
+}
+.title {
+    margin-top: -15px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.upBTN {
+    margin-top: 10px;
+}
+.controls-button {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    font-weight: 900;
+}
+.game {
+    margin-top: 80px;
+    border: 1px solid #fff;
+    width: 1280px;
+    height: 720px;
+    background: url('background.png');
+    background-attachment: fixed;
+    background-position: center;
+}
+.score-show {
+    color: #fff;
+}
+
+.spaceship {
+    width: 30px;
+    height: 80px;
+    background-color: #ff0000;
+    border: 1px solid #000;
+    position: relative;
+    top: 330px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.obstacle {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(235, 187, 99);
+    border: 1px solid #000;
+    position: relative;
+    left: 1255px;
+
+    animation: obstacleAttack;
+    animation-iteration-count: infinite;
+}
+.obstacle1 {
+    top: 290px;
+    animation-duration: 1.5s;
+    animation-delay: 0.9s;
+}
+.obstacle2 {
+    top: 330px;
+    animation-duration: 1.3s;
+    animation-delay: 0ms;
+}
+.obstacle3 {
+    top: 10px;
+    animation-duration: 2s;
+    animation-delay: 1.3s;
+}
+@keyframes obstacleAttack {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-1300px);
+    }
+}
+@keyframes goUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-450px);
+    }
+}
+@keyframes goDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(450px);
+    }
+}
+.up {
+    animation: goUp;
+    animation-duration: 1s;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+}
+.down {
+    animation: goDown;
+    animation-duration: 1s;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+}
+.highlighted {
+    background-color: #969393;
+}
